@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="./style.css">
+    <!-- production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Calculo de cambio porcentual</title>
+</head>
+<body>
+    <div id="app" class="container">
+        <h4 class="center">Calculo Porcentual</h4>
+        <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="first_name" type="number" class="validate" v-model="valorInicial" >
+                  <label for="first_name">Valor inicial</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last_name" type="number" class="validate" v-model="valorFinal" >
+                  <label for="last_name">Valor Final</label>
+                </div>
+              </div>
+            </form>
+        </div>
+        <!-- <a class="waves-effect waves-light btn max-width" @click="getPorcentaje()">Calcular</a> -->
+        <div v-show="getPorcentaje()" class="center"><h4>{{getPorcentaje()}}</h4></div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
